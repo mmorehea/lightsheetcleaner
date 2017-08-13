@@ -4,6 +4,7 @@ import code
 import glob
 import os
 import tifffile
+import sys
 from datetime import datetime
 
 inDir = sys.argv[1]
@@ -37,7 +38,8 @@ firstStack = tifffile.imread(inDir + l[0])
 z, x, y = firstStack.shape
 startTime = datetime.now()
 for frameNumber, frame in enumerate(l):
-	print frame + " / " + len(l)
+	print str(frame) 
+	print str(frameNumber) + " / " + str(len(l))
 	stack = np.uint8(tifffile.imread(inDir + frame))
 	for ii in range(z):
 		if ii == 0:

@@ -8,6 +8,8 @@ To use:
 
 python clean.py [path/to/tiff/stacks/] [path/to/output/folder/]
 
+For example: "python clean.py ./test/ ./out/"
+
 Output folder must be created.
 
 Paths need a trailing "/".
